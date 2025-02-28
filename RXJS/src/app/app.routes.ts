@@ -4,6 +4,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NgModel } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -11,7 +12,11 @@ export const rootRouterConfig: Routes = [
     { path: 'sobre', component: SobreComponent },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'produtos', loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
-        .then(m => m.ProdutoModule)}
+        .then(m => m.ProdutoModule)},
+
+
+
+        {path: '**', component: NotFoundComponent },
 
 
 ];
