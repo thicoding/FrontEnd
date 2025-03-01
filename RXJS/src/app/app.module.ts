@@ -26,7 +26,7 @@ import { AppRoutingModule } from './app.routes';
     NavegacaModule,
     AppRoutingModule ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
+   
   ],
   bootstrap: [AppComponent]
 })
